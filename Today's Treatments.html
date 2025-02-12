@@ -1,0 +1,144 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-simple&code=PYBwLglsB2AEC8sDeBYAULWZjADaRAC5l1NMwAnCAc2oFMLiByAQwA8IBnJgGlLPZcACsAjQwDYkiwBPEHWacAFiwAmwAO5NYAXz4YyEtmADKYGbgUkDZWADMYYAGIsAthFwzmANQaqW0Cy8_LYO4iYQAF5WAIwATCG6-qHAFK4sYBKM9gCu0ADGkDAAFCAsFG6cAJTWtpgUdGA5FHBlFa6cANoADAC6AHSBrnSwANSwTMxjsIl1tm2VPQMAbiy4OXT92GZU0NTFVf0NILgs-XTFAPQAOgBCxQD88MXXqkgAzDpVo48AhK9VKqXag8CYTGrjbSAGoImABuRI6fh6fhsACCHE4UkS5nkzFW6zowRssEEnAAMiwAEZ0XBY4mYMLONweLwTXwUfyBIlzRkRaLEeLJOoONIZLLEOx5QpQaDFfEbGqoelkBpNFqweWbbaUMT7Q7HU7nK53R7PV4fL4_B7_VSA4Gg7RMCFgmHw5WI4nI4mcE4QMBksRWJVzZSaCVrTgjWCXS6wABKdFcwGWdE4sGoVFUuEDaZgWCUIwAGgBaUkIpFCmTorh02w4qxMfIZOjUVIyblkMQpiiR4iUDag6OxkypMD2CjAVywJQ0JRYYCwXCaRL-MAsYidWYTADiOSnABUGhlhuIO7YmAB1GcSaC6s9kJgAETo4jWsAAwhONNB75gmHGcDHd8AjWX8Jn3QC5wAUWMCppRgMCmH3OhGjnd9LACO8hXPYDlj9GRYCcDxsz2RCAElXBOAIgJgTgcnwDIZUQpx1lSCBVBGQ86GPF8wEQ244NTD9aPotcih_bCHxLOMWHbSS_18aAUJ7JhEl6STSQpalaVqYVHBcdxPB8PwQLA3koliBJPUkn1s39QNazqUMNHDXBI0wGN40TZMhIzdiSKEvMwALWAAE1SwxcsDC9TBIyoVMN0SYM6nrZhKXKMDV3XWBN2VTAAHYAE5ukK-SyAAVgANnK94yswcqABZulqrd6piSr8rq2AGoADh6lq8u6hrypiLqGriGJOta7ruh6uIuveSrCoGuZMDiHrKpW1a4nyuItrmOJesKrd1K3P1EzMCwg2m_I8FSZgAGIqspfK6Eq1T3TK05tMckMlDDLAKAHaaQGATg_RlZgqGoJQ-K6xkDJZYyOVM-HHD5Sy0dFTJJFyApxNKcpKkVab6kaZpWiJjp-k1LZgB2XUDiOOgqKNG57ieF43k-b4_gBIEQTBJ1pmhOFpo9OYJbIKXToMPzVF-xc6DsMBmDiboAFJ72h2HmHKrXJOwIgJhiTX70pYBMknPWtaRdAdFhIA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: { type: 'shadow' },
+    textStyle: {
+      fontFamily: 'Verdana',
+      fontSize: 12
+    },
+    formatter: function(params) {
+      return params[0].name + ': ' + 
+             params[0].value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' €';
+    }
+  },
+  xAxis: {
+    type: 'value',
+    axisLabel: {
+      fontFamily: 'Verdana',
+      fontSize: 12,
+      formatter: function(value) {
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' €';
+      }
+    },
+    splitLine: {
+      show: false  // Removes gridlines on the X-axis
+    }
+  },
+  yAxis: {
+    type: 'category',
+    inverse: true,  // Sort from high to low
+    data: [
+      'Gum Treatment',
+      'Whitening',
+      'Dental Crown',
+      'Root Canal',
+      'Tooth Extraction',
+      'Teeth Cleaning',
+      'Cavity Filling',
+      'Implant Consultation',
+      'Fluoride Treatment',
+      'Braces Consultation',
+      'X-Ray',
+      'Veneers'
+    ],
+    axisLabel: {
+      fontFamily: 'Verdana',
+      fontSize: 12
+    },
+    splitLine: {
+      show: false  // Removes gridlines on the Y-axis
+    }
+  },
+  series: [
+    {
+      type: 'bar',
+      data: [
+        7909,
+        5653,
+        5403,
+        5167,
+        4883,
+        4451,
+        4217,
+        4082,
+        3693,
+        2863,
+        2723,
+        2489
+      ],
+      itemStyle: {
+        color: '#56b7e6'
+      },
+      label: {
+        show: true,
+        position: 'right',
+        fontFamily: 'Verdana',
+        fontSize: 12,
+        formatter: function(params) {
+          return params.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' €';
+        }
+      }
+    }
+  ],
+  grid: {
+    left: '20%',
+    right: '5%',
+    top: '10%',
+    bottom: '5%'
+  }
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

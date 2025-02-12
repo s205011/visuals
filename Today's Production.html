@@ -1,0 +1,124 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-tick-align&code=PYBwLglsB2AEC8sDeBYAULWAPAgliAzgFzLqaZgCeIApiQOQDGAhmDQObABOl9ANGXIATVsxIBtegAYAHESlT-saQE55ivsoCMU9UvpatezQYBMx7QGYLBgCw2tAVgcA2BwHY9AXQEZyzfAIAGWYAIxoAGxJUP3JYADMYMAAxZgBbCAjKBgA1Gi4RaGZ-QTjE6DAAZQgALzpYLVNS2ABfXziCEAiIMCCIaHqYuMwCAAtgAHcSeOYIghpMAHpF2AAlGjTgADcaAlgdrkgWCNh2LgghboGCZpbBNsFKPEJo5qpaBi3ZgFcaEtjYAFCCFwlFSACRuMpglZvMlisABIXXawACaAFogXsvhFfjcAQ8AZ1ur1-oNmpDJtNYQtYMs1httijxucaklZqdzpcyfi4nc_ISRvkILsJM0hsMiml6vQcIxGN80t8IqwaEJYAAFLjAITfRiQGD_YawERgMSwcSmGTuFyaFy2UwqTSGGQyLTO2yyWzOmSmdzu2CmJz2zR-nSmTSWUxWp2wSw2oOaWw6dymHwU2DvGVXP7tYY5ypUCLkiHkRjACLcBgAYkcLlC7hoLnoGcFwx6G0LlGLr1LmHLla4NbrDabLdLbbiKtBveNlOhYC4vzzxvKKXSmWyyjyBWYRSNc7X1TqJEaK-GiS4aVYbCHCW-0H1UGgAAoQMwuOkCABKcFz8hcDQYDfFwcDvp-aQEAAdKazAAJLQEINBYAg8CICosAZsaAD8sDgV-UE4r8UFgMAhbnNA7Avt-UGAV0zCMDQL6LAAOgAQi-2HwC-LFCEglgtN-ADUnEAIS8d-36LOwJjKL-QnKLAgA1BPQmF9sMDD0AA3FhrStrcgjpn4pEVpAICzuQi4QOw7D5AwWIHhQyFVEWJarkkqQZFkuT5IUxTnpgR61PUjS3Oel7XmAt7TA-T4wG-H5fr-EpxIBwGgXhiWQeIUheFBWI5D8CwKfQAA8oRcIsAB8qlCbp-GQVB14gC-HZpAgVVqf-mBtU1H4ANb5LAJWKQpvXzOcuwAHLpMVygMMNuk9WwaSEUVJFkVZlHUbRND0YxzHsZx3G8fxgkidh4lCJJ0myfQ8mKSpuk0QAVsA_QvmVFXVfdOkEvcebFrZiEWZgsESLK8qKsqqrqlqOp6ga0D0EZHSRDQ-pqgAsjq9QzHMNDnqR5kNAomjkPSOM7HsQM0IhmbAJmowLMTzTFvEYCnmTFMrDg3TsNANMcHT6qkUzCzs2AbzOV2PZ_heHkbt526-Xu_kZkFJ4NE0_0CugLRaUAA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  xAxis: {
+    type: 'category',
+    data: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+    axisLabel: {
+      fontFamily: 'Verdana',
+      fontSize: 12
+    },
+    splitLine: {
+      show: false  // Removes vertical gridlines
+    }
+  },
+  yAxis: {
+    type: 'value',
+    axisLabel: {
+      show: false  // Hides Y-axis values
+    },
+    splitLine: {
+      show: false  // Removes horizontal gridlines
+    }
+  },
+  series: [
+    {
+      name: 'Accumulated Production',
+      data: [2876, 6429, 11881, 14084, 18271, 21564, 27102, 32289, 37621, 41072],
+      type: 'line',
+      lineStyle: {
+        color: '#56b7e6'
+      },
+      itemStyle: {
+        color: '#56b7e6'
+      },
+      label: {
+        show: true,
+        fontFamily: 'Verdana',
+        fontSize: 12,
+        formatter: function(params) {
+          return params.dataIndex === 9 
+            ? params.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' €' 
+            : '';
+        }
+      }
+    }
+  ],
+  tooltip: {
+    trigger: 'axis',
+    textStyle: {
+      fontFamily: 'Verdana',
+      fontSize: 12
+    },
+    formatter: function(params) {
+      return params[0].axisValue + '<br/>' +
+        params.map(item => 
+          item.marker + ' ' + item.seriesName + ': ' +
+          item.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' €'
+        ).join('<br/>');
+    }
+  },
+  legend: {
+    data: ['Accumulated Production'],
+    selectedMode: false,
+    top: 100,    // Moves legend to the top
+    left: 100,   // Aligns legend to the left
+    textStyle: {
+      fontFamily: 'Verdana',
+      fontSize: 12
+    }
+  }
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
