@@ -1,0 +1,143 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-simple&code=PYBwLglsB2AEC8sDeBYAULWZjADaRAC5l1NMwAnCAc2oFMLiByAQwA8IBnJgGlLPZcACsAjQwDYklj8yWAJ4g6zaDDpNYAek2xAMuSwASnQC2wAG51OWABZ1Y1CnXmxr5hrDoAzT3QDGYWVgAXz4MMgk2MABlMHlcZRIwuU8YMAAxFmMIXHlmADUGABMWaBZeQMwU8SiIAC8EgEYAJkCQwLpIihYAYU5OABUOsGYAI2AKQoYAWi7CiABXTmIAFhA2AG5YEBZCuehqYgA2Ndhmtc2Rll8AawdgeehC4gpqS4AKJoBWT55YL5-_t9fgAGAB0AE4AJTrXhaHSAXg3AKS7sCipmAYGsWBw-AgIFgnFiuDE1ECKQoxhYYAkjFgnge_igcDe2y6xk4kMSckwjjA8woTIqZBZmU4AG1gQBdUGlYx2ADUgswTGYsAVSS5wrZ4qlZhYuHmdFB2BiVH2b0hoMcIFwVzob00AB0AEJvAD88DeDsKSAAzEFIXK3QBCL2QyGaai_DRMDlqrlkDSAGoImILoa1-G0wmwAIIcJac8KKBJMXX69ShOSCTgAGRYIzouCk-NcAHdiJ49Zw7Jm5JxrRAwNWxAlpJxW-3O92KwI80PoCPm8A27TJ8Fp5gq_0IDcm2OlxPcF3ghnp_Jc1wpIFYkpmL5KXRqON5OV1WILBQu8RKAb17BimAWGIUVBSYABxeZjFgfpHEpWVxFhJgAHVrAHOhoGJBCABE0IA3BYG6Cgl2gBCDBwMB8JKPUEP6MjMQAUU6K5IBgF94yYQY6AxfD4hKDCo26FgzAHZw0myIl9gQgBJYxrRKcjuhgTh5nwSlGQQtJ9XGCBJigmCwDgsBWK5JgnS6XxLHwxTlIA5jiKjAANKYDBYZ8owKecGG4QIJV_Kta3rRsC17ccsAoH9BTEThtISb86F_TB30gO9cGzIlqGgZgsl2eIjMrNKMtgJh4k8Qz4q2HY9gOWBxRBWrTklMqqnSTJslyQqCgmSjcrIJqanqYhmjK3w8HGZgAGJgUmqbuvIIYomsHYlwU3BRsKl53n-X5NsBAEwQADkhbqexnLg5wXPdlw7Q8p0CTdt2uXcQquo9jswPsiUHYdHv3FdruPMJjq7KhLCAwJUHVcgi1GFgKBmv9KUA6qAHZwWBcFfk-Q5Ph9DHlmBHHYE-BpDiR35lj2vaCeWZYibJpoGlJ2A8b2ppfh9Q5wQJpo9sOLmkaaLnyfBHzBVqeILECqYGjKy4KEQ7SMWYJHPgAUjh1DjBiOIR0VWBhpWmkmDG7o6MwzC6LSWFtFgQAeDcACv2UQAx4YcKWBZb1kaKF12WnXGSYKGcuZFiA4nflD05DjDw4JThWAAGk6DoPFVHJPVYEIh5Jld4b-U8wVXrIEwQAWqL82ka2kRRNLrDAHJYGr6kXDcCgPG8PwAghsgNa1-JL07uR9dWo3s26bokbo5YrZ0e3YCHaga_cVx3w9g3dcwH2_YYQOFnzUVw_3yOI5j626OgJTHCsDPHjobPxnnD9YBgJv311oJ87Km0Ar7-M3pC2KyswCAYAUVbLMCoPPUqusmoZCyDkfIRQuoANpKkPqjRWa60HobCaU1Jpw0qOMCkVJJC0npLZWAzIYYig5ODH-ZAeR8gFP3DUlC2SglLAaI0wATTEnNJaJONpzL2mdG6D0XpfT-kDK6EMhQwwRijIVWMa8EywGTEotMTC36d00XIbRsARZhAcNpb-ZBirDEKs0NWv5wE12YBY7q2AiDmOBJYwIYwqTAGMMwVWKYAboCCOsIAA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: { 
+      type: 'none' // ❌ Removes the grey hover effect
+    },
+    textStyle: {
+      fontFamily: 'Verdana',
+      fontSize: 12
+    },
+    extraCssText: 'border-radius: 4px; padding: 6px 12px; background: rgba(255, 255, 255, 0.9);', // 🔥 Smooth tooltip styling
+    formatter: function (params) {
+      return (
+        params[0].name +
+        ': ' +
+        params[0].value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') +
+        ' €'
+      );
+    }
+  },
+  xAxis: {
+    type: 'value',
+    axisLabel: { show: false },
+    splitLine: { show: false },
+    axisLine: { show: false },
+    axisTick: { show: false }
+  },
+  yAxis: {
+    type: 'category',
+    inverse: true,
+    data: [
+      'Gum Treatment', 'Whitening', 'Dental Crown', 'Root Canal', 'Tooth Extraction',
+      'Teeth Cleaning', 'Cavity Filling', 'Implant Consultation', 'Fluoride Treatment',
+      'Braces Consultation', 'X-Ray', 'Veneers'
+    ],
+    axisLabel: {
+      show: true,
+      inside: true,
+      verticalAlign: 'middle',
+      align: 'left',
+      padding: [0, 0, 0, 10],
+      fontFamily: 'Verdana',
+      fontSize: 12,
+      color: '#000000',
+      textShadowColor: 'rgba(255, 255, 255, 0.8)',
+    },
+    axisLine: { show: false },
+    axisTick: { show: false },
+    splitLine: { show: false }
+  },
+  series: [
+    {
+      type: 'bar',
+      data: [7909, 5653, 5403, 5167, 4883, 4451, 4217, 4082, 3693, 2863, 2723, 2489],
+      zlevel: -1,
+      barWidth: '75%',
+      itemStyle: {
+        color: '#CEDDEF', // 🎨 Standard bar color
+        barBorderRadius: [16, 16, 16, 16] // Keep normal rounded corners
+      },
+      emphasis: { // 🔥 Slightly lighter hover effect
+        itemStyle: {
+          color: '#ACC7E4', // 🎨 Lighter hover color
+          barBorderRadius: [16, 16, 16, 16] // Ensures rounded corners on hover
+        }
+      },
+      label: {
+        show: true,
+        position: 'right',
+        fontFamily: 'Verdana',
+        fontSize: 12,
+        color: '#000000',
+        formatter: function (params) {
+          return (
+            params.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') +
+            ' €'
+          );
+        }
+      }
+    }
+  ],
+  grid: {
+    left: '12%',
+    right: '12%',
+    top: '10%',
+    bottom: '5%'
+  }
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
