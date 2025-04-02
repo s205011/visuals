@@ -1,0 +1,225 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-simple&code=PTAEAkFMBsAdIE6gC4HtQDNUILYENlQdUA7ZAC1BLx0gGdQ8BjJ7AEwEsSBzFdPAEYCEkAG4cCHUqAQBXaPQCwAKAyySTZFJKZs-ZAEEhI8QUhsAImYAUbMwEpQAbxWg3oViTqE7AT1AAvKB2yJAAdNyQyFah1vYA3K7unt5EpBSBwWYRUQCy6eRxicpJbimEatDQ-WTkDEEA2gDkuXgITORNADSgTQawCBzQ3b2tviNNAFLqkBPT0OMAusXuHqSpxLUAcjT0mc2TeCRhEwBikAInPS1tHRP9g8PXY3Mzrwv3stxXvQDKkLBkD8mgB5TTAraoUTAiyQJgnZYqUprLyEaCCGCZSrVAp0MJcJjQWRsejWTYUHa0OgNcnkRb2ZGrAD8oAABgASJy0yn0GkFRYAX1AnL8AtZjPcAC42ZzubtqbTBcKnKLWcVkSJkLIEDp0QIYMUBUjlCBQABxSAkRBmUDo1IAZgADFlfAw8AwsLgCKE2LaMdA3SRfQg8AB3LKhUCoAQAKzhyDoKnKLvqoAaiOUyZDoZie0aGc9oGsCkIHEyACYAJzxUBlgB8QUdNY4AFoW44XMpVsnfUEreHc0VkWwwnQooOR5FojZHC3awkNWHc3jYLI6IV-6AJ_YEqBTQBpSAAqODbhcPDQXRINCoaBaWDDvCusKr9fWT36IzCMQSH3bhfKEaJQmmAADCIg2iGQaoDgoChpAHDcOQCaMEGVB6BeHAAF6QHwoAACwAIxdI6ADs5Z8MgF4qCWcEIUhKFBAYCAhr4YQYAgMHWE4tqWtwFDSk6oACj0cSBHWoCtBQYRQWwXE7sUyZoFR0AAOr0chmTwYhyF4iIbCyEwkDWNYeA9AIjgBBJeCgAA1KAAg9I6AHaQxqaubpYT4LA1jhlZRbhmAykXupOnII4ABUBGEWR5YASopoWlaIaRkwsg4PIkiiLhWo6lCiCob6sB4BwvohHgSbrIQuUkPlCAxDZ-aKVVaxVPG2gNfsGa0TVdW_OlmRNjRUSgMVpX9bBjbqqo2BFrRZZTbWoAADygE6za2bZHbIj2JULAAKtqtXZUgQRSeQMmoOobC-RpCYNBw9IrO4vUnRNdlBHYQy-IdeUndN3YtV9CwAAolb2kkEBdnHXbYe0_UddWgFF1iOmEAAcACsdmQ9JsnycjoBo4RCnImNbDvbZn3w2DpUAy9iMnQ1L5roUr2IBNAGA21mgdQQeAs2-5Oc4axqoIC2iZJ2qw3neHCwNK0urC9p6RAg0pNHgAAeHB0N0EpuKEWvIL8yC-AoisG8rWBkKcNDfRrABqiB2NQ-tdsrns2yb2GQNKhHllbIlWx-3qINKagaFopDWMVIY4HQ20e57gOorWQaQFrmRxzQ1KOosYTlQAkhnWvPSnyRAzaQTZsuD2lxmFep6kfg8pkIThGgAAyqBMBekC5qbgw8NYTSWi2ACqvwjDx8GQAA1n4GvQKQ3BNMJXNN2ULXYrm7fZN3vf94PyDD9wo_j2aABCTS7qabBsMAuS5MAvhv74xpb24PWoLe96ZByFUT4eQiWVLvMwAplrCGAHWNUn8v45wTuxbAABRZghQOChEmhJJWX9K5pzShldEWhsqZEwZAHAYRRAXlkJAcueCUSpAGD-K6qZyGULHIMegbcAi8N6L9Y6iAmhWzwSyLgJIs4SWdCydm9V-b1wkaAOchFFigGlI6ERX9pTiMzqAKRoAWSsB5tHEgDUFG6OUao9R9MGGMMIJ4U-HABCyBMZkQhmUSG4TnMw8QrCbEMNlv_KmMonDsK8m0eeiAhScjCZwjg3DdgCmlKyOymit6APccQjg2UwiHz7goIeXBz5jxILfGSAJ0RGWsMALowBuDXF6PYIUgAagjZKk5Otj3CsmsLZTkDjBjOJMbk1APd8mQEKSPEpZSRCwEqcZGpdSGm3xafYKBCAYFwI6RXAU8Utkp01EdPgf95b0NWEBM5XRkQKEiEGS2ezv6QAwMgf25ZHSXPuXwBWoBMZvKtuVaUzQBF1QmLTNgTRFjImDh07ggw2B3IrgoJ5GsYoAFJ3YV1PMhZFjo0XvIrgIVAyA0A4Gxbiq2DiSokC7v6aUp9aGQrxe4LWBgdZ0HhSnM28ANZ91CNwbA4xGWe3-SmQVytta62pfqaA7Kt7eztjgB2vRnYIFdngdFX9va_F9i80VFcuChAQNQ6VmB1C8xjjorWSdOkyCiIci1oAUWgFIoEPhTY9xgF-OQVA4YxCIH8M6vwiYPlnKDrq9w4q6Bdy4H7ZwoB1zeojheMcwkw1uAjftDgTB56KzjV60MiaAy4ShRXOgszMFRqtDm-N-bMBJqLQy5EvgWW6xlcrTlMamhGtoeqz2EbJUwFbSWvNBbk2mgAJotgjX6KVDByClRJCQUNVs-3RqrcO2thaU3LtZRmrNa6E0buTcWlOpboDltXbG6tI760dOPW4OJ9AAVW1wU3agtANZApOj2pu7bl7Ru_RXYVsiGqpuVnQYghLyDqLCOWUDqwz1WlNubGNL68FGOwBrAAxPhAQ6NKzMAA1_UMpUBKgEDsG9wd6m7sKQxbZwaTlbofVr0bDuH8NMGERRtwVGK5tEgHgWjKGGPcww1QSAPqOhtATBEEMsA53wgrfxhAZoQycEtMgVGTktOgGImmYTKceKoAwBgMczyiY9CY1hvAjomD2jYJWdePHOmGeM6Z6DAA2TGFnbyiaaJhyA6NHkYHc45uDX8XMmaiNBrG3mV7Mb8xgfCGB0YYAEI5_Tbh6QMac57PUA76NcbA-uulkAwue1gKgOgmDtAazQLAQjsr0jysVU0ZVqqGtN01dqnTsGMtXn0AaiOprXGxzaLnK11r3AHJ1KNMbSDi6lxdUEKsfWK4skQXiLtncRlHwKY4yZlppkVOYPM2p9TeiNJxuvZpnHJspw1k0U5X9znPaXR81DKc30dtBR1mWvguW9AQ7MMrEY8DSiMQoM1pj-Yg_A7_UjaNeuFaB4JwdX9LMscgO50ikByzll-ynYjbBSPkbwTl5WNGzZ0Y-1vDHfmsc47x7d57IO8vGpp03K9KA5Clb6xVqrJjaviwJ17Jr9sFhOxdkcNVIPVhdZwjqvrociXhxNVHSWo346JwK3dtw02dAbcLvzEuijeHLcrKtlO625ubZodt0Z_cJnFMO_YcpsyTvVLO0sxw9lrvM911KXoj2-sva3qH5W4eIWAXiEAA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    // Helper to format month names according to abbreviation rules
+function formatAbbreviatedDate(date) {
+    const day = date.getDate();
+    const month = date.getMonth();
+
+    const fullMonths = ['March', 'April', 'May', 'June', 'July'];
+    const monthNames = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+
+    const label = fullMonths.includes(monthNames[month])
+        ? `${monthNames[month]} ${day}`
+        : `${monthNames[month]} ${day}`;
+
+    return label;
+}
+
+// Generate last 30 days as formatted labels and raw date objects
+const days = [];
+const rawDates = [];
+for (let i = 29; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    rawDates.push(new Date(d)); // Keep original for tooltip
+    days.push(formatAbbreviatedDate(d));
+}
+
+// Create random weights and normalize to 41,072 total
+let weights = Array.from({ length: 30 }, () => Math.random());
+const totalWeight = weights.reduce((a, b) => a + b, 0);
+weights = weights.map(w => (w / totalWeight) * 41072);
+
+// Generate cumulative turnover and paid data
+const turnoverData = [];
+const collectionData = [];
+let turnoverSum = 0;
+let paidSum = 0;
+
+for (let i = 0; i < 30; i++) {
+    const dailyTurnover = Math.round(weights[i]);
+    turnoverSum += dailyTurnover;
+
+    const dailyPaid = Math.round(dailyTurnover * (0.85 + Math.random() * 0.1));
+    paidSum += dailyPaid;
+
+    turnoverData.push(turnoverSum);
+    collectionData.push(paidSum);
+}
+
+option = {
+    tooltip: {
+        trigger: 'axis',
+        textStyle: {
+            fontFamily: 'Verdana',
+            fontSize: 12
+        },
+        formatter: function(params) {
+            const index = params[0].dataIndex;
+            const date = rawDates[index];
+            const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+            const fullDate = date.toLocaleDateString('en-GB'); // dd/MM/yyyy
+
+            let tooltip = `${dayName}, ${fullDate}<br/>`;
+
+            params.forEach(item => {
+                const cumulative = item.value;
+                const previous = item.seriesName === 'Turnover'
+                    ? index > 0 ? turnoverData[index - 1] : 0
+                    : index > 0 ? collectionData[index - 1] : 0;
+
+                const contribution = cumulative - previous;
+
+                tooltip += `${item.marker} ${item.seriesName}: ` +
+                    `${cumulative.toLocaleString('en').replace(/,/g, ' ')} € ` +
+                    `(+${contribution.toLocaleString('en').replace(/,/g, ' ')} €)<br/>`;
+            });
+
+            return tooltip;
+        }
+    },
+    legend: {
+        left: 120,
+        top: 50,
+        data: ['Turnover', 'Paid']
+    },
+    grid: {
+        left: '10%',
+        right: '10%',
+        bottom: '10%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        data: days,
+        axisLabel: {
+            fontFamily: 'Verdana',
+            fontSize: 12,
+            interval: function(index) {
+                return index % 7 === 0; // Show every 7 days
+            }
+        },
+        axisLine: { show: false },
+        axisTick: { show: false },
+        splitLine: { show: false }
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            show: false // Y-axis labels hidden
+        },
+        axisLine: { show: false },
+        axisTick: { show: false },
+        splitLine: { show: false }
+    },
+    series: [
+        {
+            name: 'Turnover',
+            type: 'line',
+            data: turnoverData,
+            smooth: 0.2,
+            lineStyle: {
+                color: '#4b89ac',
+                width: 2
+            },
+            itemStyle: {
+                color: '#4b89ac'
+            },
+            areaStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    { offset: 0, color: '#a0c3d9' },
+                    { offset: 0.65, color: '#e8eff6' },
+                    { offset: 0.85, color: '#f4f8fb' }
+                ])
+            },
+            label: {
+                show: true,
+                position: 'top',
+                fontFamily: 'Verdana',
+                fontSize: 12,
+                formatter: function (params) {
+                    return params.dataIndex === 29
+                        ? params.value.toLocaleString('en').replace(/,/g, ' ') + ' €'
+                        : '';
+                }
+            }
+        },
+        {
+            name: 'Paid',
+            type: 'line',
+            data: collectionData,
+            smooth: 0.2,
+            lineStyle: {
+                color: '#e67e22',
+                width: 2
+            },
+            itemStyle: {
+                color: '#e67e22'
+            },
+            label: {
+                show: true,
+                position: 'top',
+                fontFamily: 'Verdana',
+                fontSize: 12,
+                formatter: function (params) {
+                    return params.dataIndex === 29
+                        ? params.value.toLocaleString('en').replace(/,/g, ' ') + ' €'
+                        : '';
+                }
+            }
+        }
+    ]
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
